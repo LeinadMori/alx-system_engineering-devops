@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Bash script to display "Best School" 10 times,
 # and on the 9th iteration, display "Best School" and then "Hi" on a new line
 

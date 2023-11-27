@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Bash script to stop the "To infinity and beyond" process
 # Get the process ID (PID) of the "To infinity and beyond" script
 pid=$(pgrep -f "To infinity and beyond")

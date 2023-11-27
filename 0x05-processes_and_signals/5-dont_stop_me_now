@@ -1,0 +1,12 @@
+#!/bin/bash
+# Bash script to stop the "To infinity and beyond" process
+# Get the process ID (PID) of the "To infinity and beyond" script
+pid=$(pgrep -f "To infinity and beyond")
+# Check if the process is running
+if [ -n "$pid" ]; then
+    # If the process is running, send a termination signal to stop it
+    kill "$pid"
+    echo "Process with PID $pid has been stopped."
+else
+    echo "No running process found."
+fi

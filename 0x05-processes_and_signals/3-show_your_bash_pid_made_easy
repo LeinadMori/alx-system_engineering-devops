@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Bash script to display PID and process name for processes containing the word "bash"
 # shellcheck disable=SC2009
-pgrep -af bash
+ps aux | grep '[b]ash'

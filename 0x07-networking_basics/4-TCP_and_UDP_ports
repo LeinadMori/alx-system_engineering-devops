@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Show listening sockets
+netstat -tanp | grep LISTEN | awk '{print $5, $6}'
+

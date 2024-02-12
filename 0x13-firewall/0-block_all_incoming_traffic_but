@@ -17,9 +17,6 @@ sudo ufw allow 22/tcp
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
 
-# Add rule to redirect port 8080 to port 80
-sudo ufw route allow 8080
-
 # Enable ufw
 sudo ufw --force enable
 

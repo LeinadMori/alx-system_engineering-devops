@@ -1,0 +1,20 @@
+#!/bin/bash
+
+check if the correct number of arguments is provided
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <mysql_root_password>"
+    exit 1
+fi
+
+
+mysql_root_password="$1"
+current_date=$(date '+%d-%m-%Y')
+mysql_dump_file="backup.sql"
+archive_name="${current_date}.tar.gz"
+temp_dir=$(mktemp -d)
+mysqldump -u root -p"${mysql_root_password}" --all-databases > "${temp_dir}/${mysql_dump_file}"
+tar -czf "${archive_name}" -C "${temp_dir}" "${mysql_dump_file}"
+rm -r "${temp_dir}"
+
+echo "MySQL dump and archive created successfully: ${archive_name}"
+
